@@ -1,0 +1,29 @@
+{
+  "name": "19-tdd-bag_o_loot",
+  "version": "1.0.0",
+  "description": "## Instructions",
+  "main": "createTable.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "chai": "^3.5.0"
+  },
+  "scripts": {
+    "test": "mocha -R list --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joellegg/19-tdd-bag_o_loot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joellegg/19-tdd-bag_o_loot/issues"
+  },
+  "homepage": "https://github.com/joellegg/19-tdd-bag_o_loot#readme"
+}

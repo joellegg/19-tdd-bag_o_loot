@@ -10,7 +10,7 @@ const { Database } = require('sqlite3').verbose();
 // Returns a new database object and automatically opens the database
 // Database method accepts a callback function for successful connection
 // Changes will persist once connection closes
-const db = new Database('bagOLoot.sqlite', () => console.log('Connected!'));
+const db = new Database('bagOLoot.sqlite', () => console.log('Created tables!'));
 
 // errorHandler is a function which accepts an error object
 const errorHandler = (err) => {
@@ -21,4 +21,6 @@ const errorHandler = (err) => {
 
 // Passing in IF NOT EXISTS after CREATE TABLE will check to make sure there are no tables named 'employees'
 // If it does exist, this line will not run
-db.run("CREATE TABLE IF NOT EXISTS lootbag (name TEXT, toy TEXT, delivered INT)", errorHandler);
+db.run("CREATE TABLE IF NOT EXISTS children (name TEXT, naughty INT, delivered INT)", errorHandler);
+db.run("CREATE TABLE IF NOT EXISTS toyList (name TEXT, toy TEXT)", errorHandler);
+db.run("CREATE TABLE IF NOT EXISTS lootbag (toy TEXT)", errorHandler);
