@@ -8,7 +8,7 @@ describe('addChild', () => {
     it('should be a function', () => {
       isFunction(addChild);
     });
-    it('should return true', () => {
+    it('should return true if a child is added', () => {
       isTrue(addChild('suzy', 0, 1));
     });
   });
